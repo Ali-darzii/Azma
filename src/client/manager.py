@@ -15,7 +15,7 @@ def send_data_to_server(data):
 
 
 def get_data_from_client():
-    """ Get Json Data From Client """
+    """ Get Data From Client And Give One """
     while True:
         data_request = str(input("Enter your json data to send to server: "))
         try:
@@ -31,4 +31,4 @@ if __name__ == "__main__":
     get_data_from_client()
 
 
-# {"command_type":"os"}
+# { "command_type": "os", "command_name": "ping", "parameters": [ "1.1.1.1"] }
