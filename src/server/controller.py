@@ -22,7 +22,6 @@ def execute_os_command(command_name, parameters):
 
 def evaluate_math_expression(expression):
     try:
-        # Safe evaluation of the expression using eval
         result = eval(expression)
         return str(result)
     except Exception as e:
