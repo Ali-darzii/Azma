@@ -12,7 +12,7 @@ Azma Task
    ```bash
    pip install -r requirements.txt
 
-3. python src/server/manager.py
+3. To run the server, execute:
    ```bash
    python src/server/manager.py
 
