@@ -13,8 +13,6 @@ def execute_os_command(command_name, parameters, time_out=5):
 
 
 def evaluate_math_expression(expression):
-    try:
-        result = eval(expression)
-        return int(result)
-    except Exception as e:
-        return f"Error evaluating math expression: {str(e)}"
+    result = eval(expression)
+    return int(result)
+

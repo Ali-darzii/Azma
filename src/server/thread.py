@@ -23,8 +23,11 @@ def handle_request(worker_url, context: zmq.Context = None):
             except Exception as e:
                 socket.send_json({"error": e})
         elif command_type == "compute":
-            result = evaluate_math_expression(data.get("expression"))
-            socket.send_json({"result": result})
+            try:
+                result = evaluate_math_expression(data.get("expression"))
+                socket.send_json({"result": result})
+            except Exception:
+                socket.send_json(ErrorResponse.BadExpression)
         else:
             socket.send_json(ErrorResponse.OsOrCompute)
 
